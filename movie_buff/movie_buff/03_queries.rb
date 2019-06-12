@@ -1,7 +1,7 @@
 def what_was_that_one_with(those_actors)
   # Find the movies starring all `those_actors` (an array of actor names).
   # Show each movie's title and id.
-
+  Movie.joins(:actors).where("castings.ord = 1 and actors.name in ('Ben Affleck', 'Matt Damon')").pluck('movies.title', 'movies.id', 'actors.name', 'castings.ord')
 end
 
 def golden_age
