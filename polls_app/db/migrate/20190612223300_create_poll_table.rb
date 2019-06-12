@@ -7,4 +7,3 @@ class CreatePollTable < ActiveRecord::Migration[5.2]
     end
     add_index :polls, :title
   end
-end
